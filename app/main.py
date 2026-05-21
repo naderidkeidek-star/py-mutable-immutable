@@ -23,13 +23,13 @@ sorted_variables = {
 }
 
 # Put variables into a list
-variables = {"alucky_number": lucky_number, "pi": pi, "one_is_a_prime_number": one_is_a_prime_number, "cname": name, "my_favourite_films": my_favourite_films, "profile_info": profile_info, "marks": marks, "collection_of_coins": collection_of_coins}
+variables = [lucky_number, pi, one_is_a_prime_number, name, my_favourite_films, profile_info, marks, collection_of_coins]
 
 # Check each variable type
-for name, value in variables.items():
-    if type(value) in [list, dict, set]:
-        sorted_variables["mutable"].append(name)
+for variable in variables:
+    if type(variable) in [list, dict, set,tuple]:
+        sorted_variables["mutable"].append(variable)
     else:
-        sorted_variables["immutable"].append(name)
+        sorted_variables["immutable"].append(variable)
 
 print(sorted_variables)
