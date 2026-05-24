@@ -27,7 +27,7 @@ variables = [lucky_number, pi, one_is_a_prime_number, name, my_favourite_films, 
 
 # Check each variable type
 for variable in variables:
-    if type(variable) in [list, dict, set,tuple]:
+    if type(variable) in [list, dict, set, tuple]:
         sorted_variables["mutable"].append(variable)
     else:
         sorted_variables["immutable"].append(variable)
